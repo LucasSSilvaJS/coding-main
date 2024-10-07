@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portfolio</title>
+        <link rel="stylesheet" href="../css/style.css">
+    </head>
+<body>
+    <section id="formulario">
+        <fieldset>
+            <legend>Formulário</legend>
+            <form style="display: flex; flex-direction: column; width: 100%;">
+
+                <label for="nome">Nome</label>
+                <input type="text" id="nome">
+
+                <label for="sobrenome">Sobrenome</label>
+                <input type="text" id="sobrenome">
+
+                <label for="telefone">Telefone</label>
+                <input type="tel" id="telefone">
+
+                <label for="email">Email</label>
+                <input type="email" id="email">
+
+                <label for="mensagem">Mensagem</label>
+                <textarea id="mensagem"></textarea>
+                
+                <label>Linguagem</label>
+                <div>
+                    <input type="radio" name="lingua" id="ingles">
+                    <label for="ingles">Ingles</label>
+
+                    <input type="radio" name="lingua" id="espanhol">
+                    <label for="espanhol">Espanhol</label>
+
+                    <input type="radio" name="lingua" id="frances">
+                    <label for="frances">Frances</label>
+
+                    <input type="radio" name="lingua" id="ptbr">
+                    <label for="ptbr">Portugues(pt-br)</label>
+                </div>
+
+                <label for="prototipo">Protótipo</label>
+                <input id="prototipo" type="file" accept=".pdf,.doc,.docx,.jpeg,.png">
+
+                <label>Linguagens favoritas</label>
+                <div>
+                    <input type="checkbox" id="javascript" name="linguagens">
+                    <label for="javascript">Javascript</label>
+
+                    <input type="checkbox" id="python" name="linguagens">
+                    <label for="python">Python</label>
+
+                    <input id="java" type="checkbox" name="linguagens">
+                    <label for="java">Java</label>
+
+                    <input id="ruby" type="checkbox" name="linguagens">
+                    <label for="ruby">Ruby</label>
+                </div>
+            </form>
+        </fieldset>
+    </section>
+</body>
+</html>
