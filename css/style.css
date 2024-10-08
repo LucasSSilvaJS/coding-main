@@ -61,3 +61,13 @@ iframe{
     width: 100%;
     height: 300px;
 }
+
+#formulario form{
+    display: flex; 
+    flex-direction: column; 
+    width: 100%;
+}
+
+#formulario form > label, #formulario form > span{
+    margin: 10px;
+}

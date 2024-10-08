@@ -10,55 +10,78 @@
     <section id="formulario">
         <fieldset>
             <legend>Formulário</legend>
-            <form style="display: flex; flex-direction: column; width: 100%;">
+            <form>
 
                 <label for="nome">Nome</label>
-                <input type="text" id="nome">
+                <input type="text" id="nome" placeholder="Insira seu nome">
 
                 <label for="sobrenome">Sobrenome</label>
-                <input type="text" id="sobrenome">
+                <input type="text" id="sobrenome" placeholder="Insira seu sobrenome">
 
                 <label for="telefone">Telefone</label>
-                <input type="tel" id="telefone">
+                <input type="tel" id="telefone" placeholder="(99)99999-9999">
 
                 <label for="email">Email</label>
-                <input type="email" id="email">
+                <input type="email" id="email" placeholder="Insira seu e-mail">
 
                 <label for="mensagem">Mensagem</label>
-                <textarea id="mensagem"></textarea>
+                <textarea id="mensagem" placeholder="Informe o que deseja"></textarea>
                 
-                <label>Linguagem</label>
-                <div>
-                    <input type="radio" name="lingua" id="ingles">
-                    <label for="ingles">Ingles</label>
-
-                    <input type="radio" name="lingua" id="espanhol">
-                    <label for="espanhol">Espanhol</label>
-
-                    <input type="radio" name="lingua" id="frances">
-                    <label for="frances">Frances</label>
-
-                    <input type="radio" name="lingua" id="ptbr">
-                    <label for="ptbr">Portugues(pt-br)</label>
-                </div>
+                <span>Lingua</span>
+                <select name="lingua">
+                    <option selected disabled>Selecione uma lingua</option>
+                    <option value="Ingles">Ingles</option>
+                    <option value="Espanhol">Espanhol</option>
+                    <option value="Frances">Frances</option>
+                    <option value="Portugues(pt-br)">Portugues(pt-br)</option>
+                </select>
 
                 <label for="prototipo">Protótipo</label>
                 <input id="prototipo" type="file" accept=".pdf,.doc,.docx,.jpeg,.png">
 
-                <label>Linguagens favoritas</label>
+                <span>As linguagens que você prefere?</span>
+                <select name="linguagens" multiple>
+                    <option selected disabled>Selecione uma linguagem</option>
+                    <option value="Javascript">Javascript</option>
+                    <option value="Python">Python</option>
+                    <option value="Java">Java</option>
+                    <option value="Ruby">Ruby</option>
+                </select>
+                <span>(Para fazer várias escolhas, mantenha a tecla CTRL pressionada)</span>
+
+                <span>Tipo de banco de dados recomendado para o serviço</span>
                 <div>
-                    <input type="checkbox" id="javascript" name="linguagens">
-                    <label for="javascript">Javascript</label>
+                    <input type="radio" name="banco" id="mysql">
+                    <label for="mysql">MySQL</label>
 
-                    <input type="checkbox" id="python" name="linguagens">
-                    <label for="python">Python</label>
+                    <input type="radio" name="banco" id="postgresql">
+                    <label for="postgresql">Postgresql</label>
 
-                    <input id="java" type="checkbox" name="linguagens">
-                    <label for="java">Java</label>
+                    <input type="radio" name="banco" id="mongodb">
+                    <label for="mongodb">MongoDB</label>
 
-                    <input id="ruby" type="checkbox" name="linguagens">
-                    <label for="ruby">Ruby</label>
+                    <input type="radio" name="banco" id="na">
+                    <label for="na">N/A</label>
+
+                    <input type="radio" name="banco" id="outra">
+                    <label for="outra">Outra</label>
+
                 </div>
+
+                <span>Turno para reuniões</span>
+                <div>
+                    <input type="checkbox" name="reuniao" id="manha">
+                    <label for="manha">Manhã</label>
+
+                    <input type="checkbox" name="reuniao" id="tarde">
+                    <label for="tarde">Tarde</label>
+
+                    <input type="checkbox" name="reuniao" id="noite">
+                    <label for="noite">Noite</label>
+                </div>
+
+                <span>Horário sugerido</span>
+                <input type="time" id="horario">
             </form>
         </fieldset>
     </section>
