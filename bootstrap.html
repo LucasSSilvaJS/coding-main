@@ -11,39 +11,66 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <style>
         section {
-            scroll-margin-top: 54px;
+            scroll-margin-top: 72px;
         }
     </style>
 </head>
 
-<body class="text-white" style="background-color: #433878;">
-    <nav class="navbar fixed-top container-fluid d-flex justify-content-center gap-4 px-4 shadow"
-        style="background-color: #7E60BF;">
-        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar"
-            aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <a class="btn btn-outline-light" href="#apresentacao">Apresentação</a>
-        <a class="btn btn-outline-light" href="#sobre">Sobre</a>
-        <a class="btn btn-outline-light" href="#formacao">Formação</a>
-        <a class="btn btn-outline-light" href="#experiencia">Experiência</a>
-        <a class="btn btn-outline-light" href="#contato">Contato</a>
+<body class="text-white"
+    style="background: linear-gradient(160deg, rgba(0,0,0,1) 0%, rgba(77,29,111,1) 30%, rgba(255,0,104,1) 100%);">
+    <nav class="navbar fixed-top d-flex justify-content-between gap-4 px-4 shadow" style="background-color: #222831;">
+        <div class="container-sm">
+            <h1 class="h1">Portfolio</h1>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation"
+                style="border: 1px solid #fff !important;">
+                <i class="bi bi-list" style="color: #fff;"></i>
+            </button>
+            <div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
+                aria-labelledby="offcanvasDarkNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Menu</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav d-flex flex-column gap-3">
+                        <li class="nav-item">
+                            <a class="btn btn-outline-light" href="#apresentacao">Apresentação</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="btn btn-outline-light" href="#sobre">Sobre</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="btn btn-outline-light" href="#formacao">Formação</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="btn btn-outline-light" href="#experiencia">Experiência</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="btn btn-outline-light" href="#contato">Contato</a>
+                        </li>
+                </div>
+            </div>
+        </div>
+
     </nav>
-    <section id="apresentacao" class="container-sm p-5 mt-4">
+    <section id="apresentacao" class="container-sm p-5 mt-5">
         <div class="row w-100 align-items-center">
-            <div class="col-4 text-end">
+            <div class="col-md-4 col-12 text-end mb-2 mb-md-0">
                 <img class="rounded-circle w-100" src="imgs/perfil.png" alt="Lucas de Souza Silva"
                     title="Lucas de Souza Silva">
             </div>
-            <div class="col-8 text-center">
+            <div class="col-md-8 col-12 text-center">
                 <h1 class="h1">Lucas de Souza Silva</h1>
                 <h3 class="h3">(Analista de Sistemas)</h3>
             </div>
         </div>
     </section>
-    <section id="sobre" style="background-color: #7469B6;" class="py-5 px-1">
+    <section id="sobre" style="background-color: #7569b665;" class="py-5 px-1">
         <div class="container-sm">
             <h2 class="h2">Sobre:</h2>
             <p><b>Graduação em Análise e Desenvolvimento de Sistemas</b> pela Faculdade Senac, <b>Licenciatura em
@@ -66,31 +93,39 @@
     </section>
     <section id="formacao" class="py-5 px-1">
         <div class="container-sm">
-            <h2 class="h2">Formação Acadêmica:</h2>
-            <ul>
-                <li>Graduação em Análise e Desenvolvimento de Sistemas - <a href="https://faculdadesenacpe.edu.br/"
-                        target="_blank">Faculdade Senac</a> - (2024 - Em Andamento)</li>
-                <li>Licenciatura em Geografia - <a href="https://portal.ifpe.edu.br/recife/" target="_blank">IFPE</a> -
-                    (2019 - 2022)</li>
-                <li>Técnico em Desenvolvimento de Sistemas - <a href="https://www.grautecnico.com.br/cursos"
-                        target="_blank">Grau Técnico</a> - (2023 - Não concluído)</li>
-                <li>Técnico em Eletrotécnica - <a href="https://portal.ifpe.edu.br/recife/" target="_blank">IFPE</a> -
-                    (2013 - Não concluído)</li>
-            </ul>
+            <div class="card text-white shadow" style="background-color: #222831;">
+                <div class="card-header h2">
+                    Formação Acadêmica
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Graduação em Análise e Desenvolvimento de Sistemas - <a
+                            href="https://faculdadesenacpe.edu.br/" target="_blank">Faculdade Senac</a> - (2024 - Em
+                        Andamento)</li>
+                    <li class="list-group-item">Licenciatura em Geografia - <a href="https://portal.ifpe.edu.br/recife/"
+                            target="_blank">IFPE</a> -
+                        (2019 - 2022)</li>
+                    <li class="list-group-item">Técnico em Desenvolvimento de Sistemas - <a
+                            href="https://www.grautecnico.com.br/cursos" target="_blank">Grau Técnico</a> - (2023 - Não
+                        concluído)</li>
+                    <li class="list-group-item">Técnico em Eletrotécnica - <a href="https://portal.ifpe.edu.br/recife/"
+                            target="_blank">IFPE</a> -
+                        (2013 - Não concluído)</li>
+                </ul>
+            </div>
         </div>
     </section>
-    <section id="experiencia" style="background-color: #7469B6;" class="py-5 px-1">
+    <section id="experiencia" class="py-5 px-1">
         <div class="container-sm">
             <h2>Experiência Profissional</h2>
-            <table class="table table-striped">
-                <thead>
+            <table class="table table-responsive table-striped table-hover shadow">
+                <thead class="table-dark">
                     <tr>
                         <th>Instituição</th>
                         <th>Cargo/Função</th>
                         <th>Período</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody class="table-group-divider">
                     <tr>
                         <td class="instituicao">Monsenhor Viana</td>
                         <td>Professor de Geografia</td>
@@ -105,16 +140,24 @@
             </table>
         </div>
     </section>
-    <section id="contato" class="container-sm py-5 px-1">
+    <section id="contato" class="py-5 px-1">
         <div class="container-sm">
-            <h2>Endereço e Contato</h2>
-            <address>
-                <b>Desenvolvido por:</b> <a href="mailto:lucas.desenvolvedor.js@gmail.com">Lucas de Souza
-                    Silva</a>.<br />
-                <b>Visite:</b> <a href="https://www.instagram.com/lucas_dev.js?igsh=MTFmMGQxdGkwcjV6eA%3D%3D"
-                    target="_blank">Instagram Profissional</a><br>
-                <b>Endereço:</b> <span>Av Hildebrando de Vasconcelos, 254 - Dois Unidos - Recife/PE</span>
-            </address>
+            <div class="card shadow mb-5" style="background-color: #ffffff;">
+                <div class="card-body">
+                    <h2>Endereço e Contato</h2>
+                    <address>
+                        <b>Desenvolvido por</b> <a href="mailto:lucas.desenvolvedor.js@gmail.com">Lucas de Souza
+                            Silva</a>.<br />
+                        <b>Visite:</b> <a href="https://www.instagram.com/lucas_dev.js?igsh=MTFmMGQxdGkwcjV6eA%3D%3D"
+                            target="_blank">Instagram Profissional</a><br>
+                        <b>Endereço:</b> <span>Av Hildebrando de Vasconcelos, 254 - Dois Unidos - Recife/PE</span>
+                    </address>
+                </div>
+            </div>
+            <iframe class="w-100"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3950.957206144181!2d-34.90404892424701!3d-8.003350379846992!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ab182be4fb27e1%3A0xc3c6d3825ac4aabb!2sAv.%20Hildebrando%20de%20Vasconcelos%2C%20254%20-%20Dois%20Unidos%2C%20Recife%20-%20PE%2C%2052140-005!5e0!3m2!1spt-BR!2sbr!4v1728428782399!5m2!1spt-BR!2sbr"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe></iframe>
         </div>
     </section>
 
