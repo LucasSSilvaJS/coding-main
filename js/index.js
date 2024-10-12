@@ -1,3 +1,18 @@
+(() => {
+    'use strict'
+    const forms = document.querySelectorAll('.needs-validation')
+    Array.prototype.slice.call(forms)
+        .forEach(function (form) {
+            form.addEventListener('submit', function (event) {
+                if (!form.checkValidity()) {
+                    event.preventDefault()
+                    event.stopPropagation()
+                }
+                form.classList.add('was-validated')
+            }, false)
+        })
+})()
+
 const botaoLimpar = document.getElementById('limpar');
 const form = document.forms['formulario'];
 
@@ -42,18 +57,21 @@ function verificarObrigatoriedadeCheckbox(){
     });
 }
 
-function addWasValidate(){
-    form.classList.add('was-validated');
-}
-
 function aplicarMascara(){
     const telefoneInput = document.getElementById('telefone');
     VMasker(telefoneInput).maskPattern('(99) 99999-9999');
 }
 
 aplicarMascara();
-
 verificarObrigatoriedadeCheckbox();
 
 botaoLimpar.addEventListener('click', limparFormulario);
-form.addEventListener('submit', enviarFormulario);
+
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    if(form.checkValidity()){
+        enviarFormulario(e);
+    }else{
+        alert('Erro ao enviar o formulário!')
+    }
+});
